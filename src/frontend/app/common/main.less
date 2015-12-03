@@ -1,0 +1,23 @@
+
+
+.header-logo-transitions {
+  transition: transform .5s, bottom 500ms, height 500ms, width 500ms;
+  transform-origin: bottom left;
+  transform: scale(1);
+}
+
+.header-logo {
+  display: block;
+  bottom: 25px;
+  position: absolute;
+}
+.header-icon {
+  font-size: 54px;
+  cursor: pointer;
+  opacity: 0.6;
+  color: @btn-default-bg;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.9;
+  }
+}

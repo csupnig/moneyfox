@@ -1,0 +1,16 @@
+<div class="tvc-time-input form-control" ng-click="focusFirst($event)">
+    <input type="text" placeholder="hh" class="hour"
+           ng-model="time.h" pattern="[0-9]{0,2}" maxlength="2" ng-model-options="{ 'updateOn': 'blur' }"
+           ng-keydown="keydown($event)" ng-focus="focus($event, 'h')" ng-blur="blur()">:
+    <input type="text" placeholder="mm" class="minute"
+           ng-model="time.m" pattern="[0-9]{0,2}" maxlength="2" ng-model-options="{ 'updateOn': 'blur' }"
+           ng-keydown="keydown($event)" ng-focus="focus($event, 'm')" ng-blur="blur()">:
+    <input type="text" placeholder="ss" class="second"
+           ng-model="time.s" pattern="[0-9]{0,2}" maxlength="2" ng-model-options="{ 'updateOn': 'blur' }"
+           ng-keydown="keydown($event)" ng-focus="focus($event, 's')" ng-blur="blur()">
+    <div class="time-input-tooltip">
+        <span translate ng-show="focussed === 'h'">EDIT_FORM_TIME_INPUT_HOUR</span>
+        <span translate ng-show="focussed === 'm'">EDIT_FORM_TIME_INPUT_MINUTE</span>
+        <span translate ng-show="focussed === 's'">EDIT_FORM_TIME_INPUT_SECOND</span>
+    </div>
+</div>

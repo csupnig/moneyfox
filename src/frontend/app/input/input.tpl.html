@@ -1,0 +1,48 @@
+<div>
+    <h1>{{'INPUT_HEADER'|translate}}</h1>
+    <div class="row buttons">
+        <button class="btn btn-default pull-right" ng-click="vm.openUploadModal()" type="button">
+            <span translate>INPUT_UPLOAD</span> <i class="fa fa-upload"></i>
+        </button>
+        <button class="btn btn-default pull-right" ng-click="vm.openSelectModal()" type="button">
+            <span translate>INPUT_SELECT</span> <i class="fa fa-calendar"></i>
+        </button>
+    </div>
+    <div class="alert alert-info" data-ng-if="!vm.statements || vm.statements.length <= 0" translate role="alert">
+        INPUT_INFO
+    </div>
+    <div class="row" ng-if="vm.statements.length > 0">
+        <form class="panel panel-default" data-ng-submit="vm.save()">
+            <div class="panel-body">
+                <table class="statements">
+                    <thead>
+                        <tr>
+                            <th translate>INPUT_DATE</th>
+                            <th translate>INPUT_DESCRIPTION</th>
+                            <th class="column-categories" translate>INPUT_CATEGORIES</th>
+                            <th translate>INPUT_AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="statement in vm.statements">
+                            <td ng-bind-html="statement.date|moment:'DD.MM.YYYY'">
+                            </td>
+                            <td ng-bind-html="statement.description" class="description">
+                            </td>
+                            <td>
+                                <select class="form-control" ng-model="statement.categories[0]" ng-options="f for f in vm.categories">
+                                </select>
+                            </td>
+                            <td ng-bind-html="statement.amount" class="amount" ng-class="{'minus':statement.amount < 0}">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-default pull-right" type="submit">
+                    <span translate>INPUT_SAVE</span> <i class="fa fa-floppy-o"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,66 @@
+<div id="view-settings">
+    <h1>{{'NAV_ACCOUNTS_AND_CATEGORIES'|translate}}</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 translate="SETTINGS_ACCOUNTS"></h2>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <button class="btn btn-default pull-right" ng-click="vm.openAccountModal()" type="button">
+                            <span translate>SETTINGS_NEW_ACCOUNT</span> <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <ul>
+                            <li ng-repeat="account in vm.accounts" class="row">
+                                <div class="title col-xs-16">
+                                    <span class="name" ng-bind="account.title"></span>
+                                    <span class="iban" ng-bind="account.IBAN"></span>
+                                </div>
+                                <div class="options col-xs-8">
+                                    <button class="btn btn-primary pull-right" ng-click="vm.openAccountModal(account)" type="button">
+                                        <i class="fa fa-cog" title="{{'SETTINGS_EDIT_ACCOUNT'|translate}}"></i>
+                                    </button>
+                                    <button class="btn btn-warning pull-right" ng-click="vm.deleteAccount(account)" type="button">
+                                        <i class="fa fa-times" title="{{'SETTINGS_DELETE_ACCOUNT'|translate}}"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 translate="SETTINGS_CATEGORIES"></h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <button class="btn btn-default pull-right" ng-click="vm.openCategoryModal()" type="button">
+                            <span translate>SETTINGS_NEW_CATEGORY</span> <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <ul>
+                            <li ng-repeat="category in vm.categories" class="row">
+                                <div class="title col-xs-16">
+                                    <span class="name" ng-bind="category.title"></span>
+                                </div>
+                                <div class="options col-xs-8">
+                                    <button class="btn btn-primary pull-right" ng-click="vm.openCategoryModal(category)" type="button">
+                                        <i class="fa fa-cog" title="{{'SETTINGS_EDIT_CATEGORY'|translate}}"></i>
+                                    </button>
+                                    <button class="btn btn-warning pull-right" ng-click="vm.deleteCategory(category)" type="button">
+                                        <i class="fa fa-times" title="{{'SETTINGS_DELETE_CATEGORY'|translate}}"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

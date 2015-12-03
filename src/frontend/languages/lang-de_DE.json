@@ -1,0 +1,59 @@
+{
+  "KEY" :             "Übersetzung",
+
+  "APP_TITLE":        "Finalyze - The spendings analyzer",
+
+  "HEADER_TITLE":     "Die einfache Ausgabenanalyze",
+  "HEADER_USER_LOGOUT": "Logout",
+
+  "CONFIRMATION_DELETE_ACCOUNT":"Konto und alle Buchungen darauf wirklich löschen?",
+  "CONFIRMATION_DELETE_ACCOUNT_YES":"Ja, Konto und Buchungen löschen",
+  "CONFIRMATION_DELETE_ACCOUNT_NO":"Abbrechen",
+  "CONFIRMATION_HEADER":"Bestätigung",
+
+  "NAV_ACCOUNTS_AND_CATEGORIES":"Koten und Kategorien",
+  "NAV_DATA_INPUT":"Dateneingabe / Upload",
+  "NAV_STATISTICS":"Ausgabenanalyze",
+
+  "LOGIN_TITLE":"Login",
+  "LOGIN_LOGIN":"Mit Facebook einloggen",
+
+  "MODAL_CANCEL":"Abbrechen",
+  "MODAL_SAVE":"Speichern",
+
+  "INPUT_HEADER":"Dateneingabe",
+  "INPUT_UPLOAD":"Datenupload",
+
+  "SETTINGS_NEW_ACCOUNT":"Neuen Account hinzufügen",
+  "SETTINGS_NEW_CATEGORY":"Neuen Kategorie hinzufügen",
+  "SETTINGS_ACCOUNTS":"Accounts",
+  "SETTINGS_ACCOUNT_DELETED":"Account wurde gelöscht",
+  "SETTINGS_CATEGORIES":"Klassifizierungskategorien",
+
+  "ACCOUNT_NEW_ACCOUNT":"Neues Konto anlegen",
+  "ACCOUNT_EDIT_ACCOUNT":"Konto bearbeiten",
+  "ACCOUNT_TITLE":"Bezeichnung",
+  "ACCOUNT_IBAN":"IBAN",
+
+  "CATEGORY_TITLE":"Kategorie",
+  "CATEGORY_COLOR":"Farbe",
+  "CATEGORY_NEW_CATEGORY":"Neue Kategorie",
+  "CATEGORY_EDIT_CATEGORY":"Kategorie bearbeiten",
+
+  "UPLOAD_DNDFILE":"Drag & Drop",
+  "UPLOAD_DNDFILE_OR":"oder",
+  "UPLOAD_SEARCH_COMPUTER":"Dateien durchsuchen",
+
+  "INPUT_DATE":"Datum",
+  "INPUT_DESCRIPTION":"Beschreibung",
+  "INPUT_CATEGORIES":"Kategorien",
+  "INPUT_AMOUNT":"Betrag",
+  "INPUT_SELECT_ACCOUNT":"Konto auswählen",
+  "INPUT_SAVE":"Einträge speichern",
+  "INPUT_SELECT":"Zeitraum wählen",
+
+  "MODAL_SELECT":"Wählen",
+  "INPUT_START":"Beginn",
+  "INPUT_END":"Ende",
+  "INPUT_INFO":"Bitte wählen Sie einen Bearbeitungszeitraum oder laden Sie neue Datensätze hinauf."
+}

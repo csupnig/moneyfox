@@ -1,0 +1,111 @@
+/**
+ * Tag inputs
+ */
+.tags-input {
+    .tags {
+        height: auto;
+        border: 1px solid transparent;
+        box-shadow: 0 0;
+        transition: background-color 0.1s, border 0.2s;
+
+        &.focused {
+            outline: 0;
+            box-shadow: 0 0;
+            background-color: white;
+            border: 1px solid @brand-primary;
+        }
+
+        input.input {
+            background-color: transparent;
+        }
+
+        .tag-item {
+            font-family: @font-family-condensed;
+            border: none;
+            border-radius: 0;
+            background: @gray;
+            padding: 3px;
+            color: white;
+            text-transform: uppercase;
+
+            &.selected {
+                background: @brand-primary;
+            }
+
+            .remove-button {
+                float: left;
+                margin: 5px 10px 5px 0px;
+                color: lighten(@gray-light, 10%);
+                transition: color 0.2s;
+                &:hover {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    .host {
+        height: auto;
+        margin: 0;
+    }
+    .autocomplete {
+        margin-top: 0;
+    }
+}
+
+
+/**
+ * Time & Date pickers
+ */
+date-picker {
+    input.picker__input.picker__input--active {
+        border-color: @brand-primary;
+    }
+    .picker {
+        min-width: 250px;
+    }
+}
+
+time-picker {
+    .tvc-time-input {
+        display: block !important;
+        position: relative;
+
+        &.focus {
+            border: 1px solid @brand-primary;
+            background-color: white;
+            .time-input-tooltip {
+                display: block;
+            }
+        }
+
+        input {
+            width: 23px;
+            border: none;
+            background-color: transparent;
+            text-align: center;
+            margin-right: 4px;
+            color: @input-color;
+
+            &:focus {
+                outline: none;
+                background-color: white;
+                border-bottom: 1px solid @gray-light;
+            }
+        }
+
+        .time-input-tooltip {
+            background-color: white;
+            z-index: 10;
+            position: absolute;
+            top: 34px;
+            left: 0;
+            width: 100%;
+            padding: 2px 2px 2px 15px;
+            border: 1px solid @gray-light;
+            display: none;
+            box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+        }
+    }
+}
+

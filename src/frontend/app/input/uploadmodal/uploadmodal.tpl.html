@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <button type="button" class="close" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title"><i class="fa fa-folder"></i> <span translate>INPUT_UPLOAD</span></h4>
+</div>
+<div class="modal-body" id="view-upload">
+    <div ng-if="!vm.selectedAccount">
+        <div class="form-group">
+            <label>
+                <span translate>INPUT_SELECT_ACCOUNT</span>
+                <select class="form-control" name="account" ng-model="vm.selectedAccount" ng-options="option.title for option in vm.accounts track by option._id">
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="panel panel-default" ng-if="vm.selectedAccount">
+        <div class="browser-upload panel-body">
+            <div fileinput onselect="vm.onselectfiles(files)"></div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancel()"><span translate>MODAL_CANCEL</span></button>
+</div>

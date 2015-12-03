@@ -1,0 +1,22 @@
+<header class="navbar navbar-default">
+    <div class="navbar-inner">
+        <div class="container">
+            <nav>
+                <span class="dropdown pull-right">
+                  <span class="dropdown-toggle header-icon" id="user-dropdown-menu" data-toggle="dropdown" aria-haspopup="true">
+                      <i class="fa fa-user"></i>
+                  </span>
+                  <ul class="dropdown-menu" aria-labelledby="user-dropdown-menu">
+                      <li><a href="/logout" translate>HEADER_USER_LOGOUT</a></li>
+                  </ul>
+                </span>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="container" ui-view="navigation">
+</div>
+
+<div class="container" ui-view="content">
+</div>

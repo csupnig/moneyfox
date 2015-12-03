@@ -1,0 +1,8 @@
+<tags-input class="tag-input" ng-model="vm.ngModel"
+            placeholder="{{ vm.placeholder | translate }}"
+            replace-spaces-with-dashes="false"
+            display-property="name"
+            add-from-autocomplete-only="{{:: vm.selectMode }}"
+            ng-required="vm.required">
+    <auto-complete source="vm.loadTags($query)" select-first-match="false" min-length="1" load-on-empty="{{:: vm.selectMode }}" load-on-focus="{{:: vm.selectMode }}"></auto-complete>
+</tags-input>

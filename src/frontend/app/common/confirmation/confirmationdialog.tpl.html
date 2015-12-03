@@ -1,0 +1,48 @@
+<div class="confirmationdialog">
+    <div class="modal-header row">
+        <div class="col-xs-20">
+            <h3 class="modal-title" data-translate="CONFIRMATION_HEADER"></h3>
+        </div>
+        <div class="col-xs-4">
+            <div class="btn-group pull-right closebutton">
+                <a class="close" data-ng-click="$dismiss('closed')"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-24 text-row">
+                <p data-ng-bind-html="vm.text"></p>
+            </div>
+        </div>
+        <div class="row" ng-if="vm.config.options.length>0">
+            <div class="col-sm-24 text-row">
+                <div class="radio" ng-repeat="option in vm.config.options">
+                    <label><input type="radio" name="{{option.title}}" ng-model="vm.selectedOption" ng-value="option.value"> {{option.title | translate}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <div data-ng-show="vm.config.buttons === 0">
+            <button class="btn btn-primary" data-ng-click="vm.close()" ng-show="vm.showFinishButton()" ng-bind-html="vm.getPositiveTitle()|translate"></button>
+            <button class="btn btn-primary" data-ng-click="vm.cancel()" ng-bind-html="vm.getNegativeTitle()|translate"></button>
+        </div>
+
+        <div data-ng-show="vm.config.buttons === 1">
+            <button class="btn btn-warning warning" data-ng-click="vm.close()" ng-show="vm.showFinishButton()" ng-bind-html="vm.getPositiveTitle()|translate"></button>
+            <button class="btn btn-link light" data-ng-click="vm.cancel()" ng-bind-html="vm.getNegativeTitle()|translate"></button>
+        </div>
+
+        <div data-ng-show="vm.config.buttons === 2">
+            <button class="btn btn-warning warning" data-ng-click="vm.close()" ng-show="vm.showFinishButton()" ng-bind-html="vm.getPositiveTitle()|translate"></button>
+            <button class="btn btn-link light" data-ng-click="vm.cancel()" ng-bind-html="vm.getNegativeTitle()|translate"></button>
+        </div>
+
+        <div data-ng-show="vm.config.buttons === 3">
+            <button class="btn btn-primary" data-ng-click="vm.close()" ng-show="vm.showFinishButton()" ng-bind-html="vm.getPositiveTitle()|translate"></button>
+        </div>
+    </div>
+</div>

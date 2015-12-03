@@ -1,0 +1,96 @@
+#view-login {
+  background-color: @gray-lighter;
+  height:100%;
+  .header {
+    height: 50%;
+    position: relative;
+    /*background-color: @gray-lighter;
+    background: url(/images/login-background_opt.jpg);
+    //xs only
+    @media(max-width: @screen-xs-max) {
+      background: url(/images/login-background_small.jpg);
+      background-size: cover;
+    }
+    //small and up
+    @media(min-width: @screen-sm-min) {
+      background: url(/images/login-background_middle.jpg);
+      background-size: cover;
+    }
+    //lg and up
+    @media(min-width: @screen-lg-min) {
+      background: url(/images/login-background_opt.jpg);
+      background-size: cover;
+    }
+    background-position: center top;
+    background-size: cover;
+    */
+  }
+  .login-form-container {
+    background-color: @gray-lighter;
+  }
+  .title {
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+    color: @brand-primary;
+  }
+  .login-form {
+    max-width: 330px;
+    margin: 0 auto;
+    padding-top: 20px;
+    .form-control {
+      background-color: @input-bg;
+    }
+  }
+  .login-info {
+    border-top: 1px solid @gray-light;
+    max-width: 330px;
+    margin: 50px auto 0 auto;
+    padding-top: 20px;
+    position: relative;
+    .or {
+      margin: -30px auto 0 auto;
+      width: 40px;
+      background: @gray-lighter;
+      text-align: center;
+    }
+    h4 {
+      margin-top: 30px;
+      font-weight: 600;
+    }
+  }
+  .recovery-link {
+    display: block;
+    margin-bottom: 10px;
+  }
+  a.recovery-link {
+    color: @gray;
+  }
+
+  .otslink-grau {
+    position: fixed;
+    left: 50px;
+    bottom: 30px;
+  }
+
+  [ui-view] {
+    &.ng-enter {
+      transition: opacity 0.5s 0.5s, max-height 0s 0.3s;
+      height: 0;
+      max-height: 0;
+      opacity: 0;
+    }
+    &.ng-enter-active {
+      max-height: 500px;
+      opacity: 1;
+    }
+    &.ng-leave {
+      transition: opacity 0.2s;
+      opacity: 1;
+    }
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
