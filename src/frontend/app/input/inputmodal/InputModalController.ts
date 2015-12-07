@@ -34,6 +34,7 @@ module finalyze {
 				return this.categoryService.getAll();
 			}).then((categories : Array<Category>)=>{
 				this.categories = categories;
+				return true;
 			}).then(() => {
 				this.newStatement();
 			});
