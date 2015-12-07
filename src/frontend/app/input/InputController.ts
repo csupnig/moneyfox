@@ -34,14 +34,25 @@ module finalyze {
 					});
 		}
 
+		public openManualModal() : void {
+			this.$modal.open({
+				templateUrl: 'app/input/inputmodal/inputmodal.tpl.html',
+				controller: 'InputModalController',
+				controllerAs: 'vm'
+			}).result
+					.then((stmts : Array<Statement>) => {
+						this.statements = stmts;
+					});
+		}
+
 		public openSelectModal() : void {
 			this.$modal.open({
 				templateUrl: 'app/input/selectmodal/selectmodal.tpl.html',
 				controller: 'SelectModalController',
 				controllerAs: 'vm'
 			}).result
-					.then((stmts : Array<Statement>) => {
-						this.statements = stmts;
+					.then(() => {
+						this.$state.go('app.statistics');
 					});
 		}
 

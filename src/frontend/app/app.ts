@@ -30,9 +30,10 @@ module finalyze{
 			suffix: '.json'
 		});
 		$translateProvider.useMessageFormatInterpolation();
-		$translateProvider.preferredLanguage('de_DE');
+		$translateProvider.preferredLanguage('en_US');
 		$translateProvider.useSanitizeValueStrategy('sanitize');
-		MessageFormat.locale.de_DE=function(n){return n===1?"one":"other"};
+		MessageFormat.locale.de_DE=(n) => {return n===1?"one":"other"};
+		MessageFormat.locale.en_US=(n) => {return n===1?"one":"other"};
 
 		$stateProvider
 			.state('app', {

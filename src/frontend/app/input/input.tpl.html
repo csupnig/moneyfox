@@ -7,6 +7,9 @@
         <button class="btn btn-default pull-right" ng-click="vm.openSelectModal()" type="button">
             <span translate>INPUT_SELECT</span> <i class="fa fa-calendar"></i>
         </button>
+        <button class="btn btn-default pull-right" ng-click="vm.openManualModal()" type="button">
+            <span translate>INPUT_MANUAL</span> <i class="fa fa-pencil"></i>
+        </button>
     </div>
     <div class="alert alert-info" data-ng-if="!vm.statements || vm.statements.length <= 0" translate role="alert">
         INPUT_INFO

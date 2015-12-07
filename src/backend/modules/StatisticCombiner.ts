@@ -48,7 +48,7 @@ export class StatisticCombiner {
                 if (typeof map[cat][res] === 'undefined') {
                     map[cat][res] = 0;
                 }
-                map[cat][res] += item.amount;
+                map[cat][res] = Math.round((map[cat][res] + item.amount) * 100) / 100
             }
         });
 

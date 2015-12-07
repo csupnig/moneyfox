@@ -1,0 +1,66 @@
+{
+  "KEY" :             "Translation",
+
+  "APP_TITLE":        "Finalyze - The spendings analyzer",
+
+  "HEADER_TITLE":     "The simple financial analyzer",
+  "HEADER_USER_LOGOUT": "Logout",
+
+  "CONFIRMATION_DELETE_ACCOUNT":"Delete account and all according statements?",
+  "CONFIRMATION_DELETE_ACCOUNT_YES":"Yes, delete account and statements",
+  "CONFIRMATION_DELETE_ACCOUNT_NO":"Cancel",
+  "CONFIRMATION_HEADER":"Confirmation",
+
+  "NAV_ACCOUNTS_AND_CATEGORIES":"Accounts and categories",
+  "NAV_DATA_INPUT":"Data input / upload",
+  "NAV_STATISTICS":"Statistics",
+
+  "LOGIN_TITLE":"Login",
+  "LOGIN_LOGIN":"Log in with Facebook",
+
+  "MODAL_CANCEL":"Cancel",
+  "MODAL_SAVE":"Save",
+  "MODAL_NEXT":"Save and next",
+
+  "INPUT_INPUT":"Input",
+  "DATE":"Date",
+  "AMOUNT":"Amount",
+  "CATEGORY":"Category",
+
+  "INPUT_HEADER":"Data input",
+  "INPUT_UPLOAD":"Data upload",
+  "INPUT_MANUAL":"Manual input",
+
+  "SETTINGS_NEW_ACCOUNT":"Add new account",
+  "SETTINGS_NEW_CATEGORY":"Add new category",
+  "SETTINGS_ACCOUNTS":"Accounts",
+  "SETTINGS_ACCOUNT_DELETED":"Account has been deleted",
+  "SETTINGS_CATEGORIES":"Categories",
+
+  "ACCOUNT_NEW_ACCOUNT":"Add new account",
+  "ACCOUNT_EDIT_ACCOUNT":"Edit account",
+  "ACCOUNT_TITLE":"Title",
+  "ACCOUNT_IBAN":"IBAN",
+
+  "CATEGORY_TITLE":"Category",
+  "CATEGORY_COLOR":"Color",
+  "CATEGORY_NEW_CATEGORY":"New category",
+  "CATEGORY_EDIT_CATEGORY":"Edit category",
+
+  "UPLOAD_DNDFILE":"Drag & Drop",
+  "UPLOAD_DNDFILE_OR":"or",
+  "UPLOAD_SEARCH_COMPUTER":"browse files",
+
+  "INPUT_DATE":"Date",
+  "INPUT_DESCRIPTION":"Description",
+  "INPUT_CATEGORIES":"Categories",
+  "INPUT_AMOUNT":"Amount",
+  "INPUT_SELECT_ACCOUNT":"Select account",
+  "INPUT_SAVE":"Save statements",
+  "INPUT_SELECT":"Select timespan",
+
+  "MODAL_SELECT":"Select",
+  "INPUT_START":"Start",
+  "INPUT_END":"End",
+  "INPUT_INFO":"Please select an editing timespan or upload new data."
+}

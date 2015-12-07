@@ -20,9 +20,16 @@
 
   "MODAL_CANCEL":"Abbrechen",
   "MODAL_SAVE":"Speichern",
+  "MODAL_NEXT":"Speichern und nächstes",
+
+  "INPUT_INPUT":"Eingabe",
+  "DATE":"Datum",
+  "AMOUNT":"Betrag",
+  "CATEGORY":"Kategorie",
 
   "INPUT_HEADER":"Dateneingabe",
   "INPUT_UPLOAD":"Datenupload",
+  "INPUT_MANUAL":"Manuelle Eingabe",
 
   "SETTINGS_NEW_ACCOUNT":"Neuen Account hinzufügen",
   "SETTINGS_NEW_CATEGORY":"Neuen Kategorie hinzufügen",

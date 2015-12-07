@@ -10,6 +10,16 @@
                       <li><a href="/logout" translate>HEADER_USER_LOGOUT</a></li>
                   </ul>
                 </span>
+                <span class="dropdown pull-right">
+                  <span class="dropdown-toggle header-icon" id="lang-dropdown-menu" data-toggle="dropdown" aria-haspopup="true">
+                      <span ng-bind-html="vm.getCurrentLanguage().title|translate"></span>
+                  </span>
+                  <ul class="dropdown-menu" aria-labelledby="lang-dropdown-menu">
+                      <li data-ng-repeat="language in vm.getAvailableLanugages()" data-ng-class="{'active': language === vm.getCurrentLanguage()}">
+                          <a href="" data-ng-click="vm.changeLanguage(language.key)" data-ng-bind-html="language.title | translate"></a>
+                      </li>
+                  </ul>
+                </span>
             </nav>
         </div>
     </div>

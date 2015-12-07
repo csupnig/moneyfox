@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <button type="button" class="close" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title"><i class="fa fa-folder"></i> <span translate>INPUT_INPUT</span></h4>
+</div>
+<form data-ng-submit="vm.select()">
+    <div class="modal-body" id="view-upload">
+        <div ng-if="!vm.selectedAccount">
+            <div class="form-group">
+                <label>
+                    <span translate>INPUT_SELECT_ACCOUNT</span>
+                    <select class="form-control" name="account" ng-model="vm.selectedAccount" ng-options="option.title for option in vm.accounts track by option._id">
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div ng-if="vm.selectedAccount">
+            <div class="form-group row">
+                <label translate for="date">DATE</label>
+                <div class="input-group">
+                   <input timestamp type="date" id="date" data-ng-model="vm.item.date" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label translate for="category">CATEGORY</label>
+                <div class="input-group">
+                    <select id="category" data-ng-model="vm.item.categories[0]" class="form-control" data-ng-options="option.title as option.title for option in vm.categories track by option._id">
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label translate for="amount">AMOUNT</label>
+                <div class="input-group">
+                    <input type="number" id="amount" data-ng-model="vm.item.amount" class="form-control"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.next()" ng-disabled="!vm.isValidItem()"><span translate>MODAL_NEXT</span></button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.save()" ng-disabled="!vm.isValidItem()"><span translate>MODAL_SAVE</span></button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancel()"><span translate>MODAL_CANCEL</span></button>
+    </div>
+</form>

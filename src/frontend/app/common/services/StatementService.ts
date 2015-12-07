@@ -7,6 +7,7 @@ module finalyze {
         categories : Array<string>;
         date : number;
         amount : number;
+        account : string;
     }
 
     export class StatementService extends AbstractCRUDableService<Statement> {
