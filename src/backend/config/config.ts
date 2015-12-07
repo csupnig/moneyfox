@@ -4,7 +4,7 @@ var config = {
             facebook: {
                 clientID: "1637608896490424",
                 clientSecret: "2de2ff240b3cbeff791428944491f3d9",
-                callbackURL: "http://localhost:8089/auth/facebook/callback"
+                callbackURL: "/auth/facebook/callback"
             },
 
             google: {
