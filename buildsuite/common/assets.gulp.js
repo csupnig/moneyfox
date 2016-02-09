@@ -15,6 +15,7 @@ Builder.prototype._copyFiles = function(src, dst) {
 };
 
 Builder.prototype._langs = function() {
+    console.log('langs');
     return promisify(this._copyFiles(this.cfg.src.langs, this.cfg.dir.langs));
 };
 
