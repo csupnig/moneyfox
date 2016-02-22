@@ -46,6 +46,7 @@
                         <ul>
                             <li ng-repeat="category in vm.categories" class="row">
                                 <div class="title col-xs-16">
+                                    <span class="color btn" style="background-color:{{category.color}};"></span>
                                     <span class="name" ng-bind="category.title"></span>
                                 </div>
                                 <div class="options col-xs-8">

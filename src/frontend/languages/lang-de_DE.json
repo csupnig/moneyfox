@@ -6,14 +6,18 @@
   "HEADER_TITLE":     "Die einfache Ausgabenanalyze",
   "HEADER_USER_LOGOUT": "Logout",
 
+  "FILTER":"Filter",
+
+  "GENERAL_CALCULATE_SUM":"Summe berechnen",
+
   "CONFIRMATION_DELETE_ACCOUNT":"Konto und alle Buchungen darauf wirklich löschen?",
   "CONFIRMATION_DELETE_ACCOUNT_YES":"Ja, Konto und Buchungen löschen",
   "CONFIRMATION_DELETE_ACCOUNT_NO":"Abbrechen",
   "CONFIRMATION_HEADER":"Bestätigung",
 
-  "NAV_ACCOUNTS_AND_CATEGORIES":"Koten und Kategorien",
+  "NAV_ACCOUNTS_AND_CATEGORIES":"Konten und Kategorien",
   "NAV_DATA_INPUT":"Dateneingabe / Upload",
-  "NAV_STATISTICS":"Ausgabenanalyze",
+  "NAV_STATISTICS":"Ausgabenstatistik",
 
   "LOGIN_TITLE":"Login",
   "LOGIN_LOGIN":"Mit Facebook einloggen",

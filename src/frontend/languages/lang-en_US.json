@@ -6,6 +6,10 @@
   "HEADER_TITLE":     "The simple financial analyzer",
   "HEADER_USER_LOGOUT": "Logout",
 
+  "FILTER":"Filter",
+
+  "GENERAL_CALCULATE_SUM":"Calculate sum",
+
   "CONFIRMATION_DELETE_ACCOUNT":"Delete account and all according statements?",
   "CONFIRMATION_DELETE_ACCOUNT_YES":"Yes, delete account and statements",
   "CONFIRMATION_DELETE_ACCOUNT_NO":"Cancel",

@@ -1,0 +1,23 @@
+<div class="dropdown">
+    <button class="btn btn-default togglebutton" type="button" ng-click="toggleSelect()" ng-keydown="toggleSelectKey($event)"
+            ng-disabled="disabled" ng-class="{'error': !valid()}">
+        <span class="pull-left" ng-include="headertemplate"></span>
+        <span class="pull-right"><i class="fa fa-unsorted"></i></span>
+    </button>
+    <ul class="dropdown-menu" data-testid="multiselectlist">
+        <li ng-show="filterenabled" class="search">
+            <input class="input-block-level" type="text" ng-keydown="inputKey($event)"
+                   ng-model="searchText" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }"
+                   placeholder="{{'FILTER'|translate}}..." />
+            <i ng-show="modelloading" class="fa fa-spinner fa-pulse"></i>
+        </li>
+        <li ng-include="topitemtemplate"></li>
+        <li ng-repeat="i in items | objectPropertiesFilter:searchText:filterfor">
+            <a ng-click="select(i); focus()" ng-keydown="keyNav($event,i)" class="selectable" tabindex="1">
+                <i ng-class="{'fa-check-square': i.checked, 'fa-square-o': !i.checked}" class="fa"></i>
+                <span ng-include="itemtemplate" ng-class="{'checked':i.checked}" class="dropdown-item"></span>
+            </a>
+        </li>
+        <li ng-include="footertemplate"></li>
+    </ul>
+</div>

@@ -41,7 +41,7 @@ module finalyze {
 				controllerAs: 'vm'
 			}).result
 					.then((stmts : Array<Statement>) => {
-						this.statements = stmts;
+						this.$state.go('app.statistics');
 					});
 		}
 
@@ -51,8 +51,9 @@ module finalyze {
 				controller: 'SelectModalController',
 				controllerAs: 'vm'
 			}).result
-					.then(() => {
-						this.$state.go('app.statistics');
+					.then((stmts : Array<Statement>) => {
+
+						this.statements = stmts;
 					});
 		}
 

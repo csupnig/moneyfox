@@ -1,0 +1,8 @@
+<label class="ui-checkbox" data-ng-class="{'checkbox-disabled':disabled}">
+    <input type="checkbox" name="{{:: name }}" data-ng-model="model" data-ng-disabled="disabled" data-ng-model-options="modelOptions ? modelOptions : {}" data-ng-change="toggle()">
+    <span>
+        <span class="checked"><i class="fa fa-check-square"></i> </span>
+        <span class="unchecked"><i class="fa fa-square"></i> </span>
+    </span>
+    <span data-ng-transclude></span>
+</label>

@@ -1,22 +1,32 @@
 <div id="view-statistics">
     <h1>{{'NAV_STATISTICS'|translate}}</h1>
 
-    <form data-ng-submit="vm.select()">
-        <div class="input-group row">
-            <div class="col-sm-8">
-                <label translate>INPUT_START</label>
-                <input type="date" ng-model="vm.starttime" class="form-control">
-            </div>
-            <div class="col-sm-8">
-                <label translate>INPUT_END</label>
-                <input type="date" ng-model="vm.endtime" class="form-control">
-            </div>
-            <div class="col-sm-8">
-                <button type="submit" class="btn btn-primary"><span translate>MODAL_SELECT</span></button>
-            </div>
-        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form data-ng-submit="vm.select()">
+                <div class="input-group row">
+                    <div class="col-sm-8">
+                        <label translate>INPUT_START</label>
+                        <input type="date" ng-model="vm.starttime" class="form-control">
+                    </div>
+                    <div class="col-sm-8">
+                        <label translate>INPUT_END</label>
+                        <input type="date" ng-model="vm.endtime" class="form-control">
+                    </div>
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-primary"><span translate>MODAL_SELECT</span></button>
+                    </div>
+                </div>
 
-    </form>
+            </form>
+        </div>
+        <div class="col-md-12">
+            <span type="checkbox" ui-checkbox name="calculatesum" data-model="vm.calculateSum" data-on-select-toggle="vm.filter()">
+                <span translate>GENERAL_CALCULATE_SUM</span>
+            </span>
+            <multiselect multiselect-dropdown ng-model="vm.selectedCategories" change="vm.filter()" label="FILTER" class="multiselect pull-right" options="r.title for r in vm.availableCategories" multiple="true" itemtemplate="app/settings/categorymodal/category.item.tpl.html"></multiselect>
+        </div>
+    </div>
 
     <canvas id="line" class="chart chart-line" chart-data="vm.data"
             chart-labels="vm.labels" chart-legend="true" chart-series="vm.series" chart-colours="vm.colors">

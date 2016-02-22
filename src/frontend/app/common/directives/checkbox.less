@@ -1,0 +1,55 @@
+.ui-radio-button, .ui-checkbox {
+    &.checkbox-disabled {
+        cursor: not-allowed;
+    }
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+    input[type=radio],
+    input[type=checkbox]{
+        width: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        opacity: 0;
+    }
+
+    input[type=radio] + span,
+    input[type=checkbox] + span {
+        display: inline-block;
+        transition: color 0.1s;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: -3px;
+        span {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    input[type=checkbox] + span i {
+        font-size: 20px;
+        line-height: 30px;
+        color: @brand-info;
+        opacity: 0;
+        transition: opacity 0.1s, color 0.3s;
+    }
+
+    input[type=radio] + span {
+        border-radius: 50%;
+    }
+
+    input[type=checkbox] + span .unchecked i {
+        opacity: 1;
+    }
+    input[type=checkbox]:checked + span .unchecked i {
+        opacity: 0;
+    }
+    input[type=checkbox]:checked + span .checked i {
+        opacity: 1;
+        color: @brand-primary;
+    }
+}
+
