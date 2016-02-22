@@ -78,6 +78,8 @@ StatementSchema.static('upsertAll', (statements : Array<IStatement>, user : mong
         }
         StatementModel.findOneAndUpdate(query, item, {upsert:true}, (err, doc : IStatement) => {
             if (err) {
+                err.item = item;
+                err.query = query;
                 console.error(query, item, err);
                 d.reject(err);
             } else {

@@ -73,9 +73,9 @@ export function init (app, passport,config) {
     app.delete('/statements/:accountid', Auth.isAuthenticated, (req, res) => {
        stmt.StatementModel.deleteByAccount(req.params.accountid, req.user).then(()=>{
            res.json({"status":"ok"});
-       }).catch(()=>{
+       }).catch((err)=>{
            res.status(500);
-           res.json({"message":"error while deleting"});
+           res.json({"err" : err, "message":"error while deleting"});
        });
     });
 
