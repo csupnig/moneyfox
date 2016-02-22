@@ -74,6 +74,7 @@ StatementSchema.static('upsertAll', (statements : Array<IStatement>, user : mong
             query['hash'] = item.hash;
         } else {
             query['_id'] = item._id;
+            delete item._id;
         }
         StatementModel.findOneAndUpdate(query, item, {upsert:true}, (err, doc : IStatement) => {
             if (err) {

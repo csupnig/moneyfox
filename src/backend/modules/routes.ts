@@ -25,7 +25,7 @@ export function init (app, passport,config) {
     app.get("/auth/facebook", passport.authenticate("facebook", {scope: "email"}));
     app.get("/auth/facebook/callback",
         passport.authenticate("facebook", {failureRedirect: '/#/login'}),
-        (req, res) => {
+        (req, res : any) => {
             res.redirect('/');
         }
     );
@@ -79,7 +79,7 @@ export function init (app, passport,config) {
        });
     });
 
-    app.get('/statistics/:start/:end/:resolution', Auth.isAuthenticated, (req, res) => {
+    app.get('/statistics/:start/:end/:resolution', Auth.isAuthenticated, (req, res : any) => {
         var query = {"date":{$gt : req.params.start, $lt : req.params.end}};
         stmt.StatementModel.search(query, req.user._id).then((items : any)=>{
             category.CategoryModel.findByUserID(req.user).then((cats) => {
