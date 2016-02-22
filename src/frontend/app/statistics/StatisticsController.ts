@@ -57,14 +57,13 @@ module finalyze {
 				this.data = [];
 				this.series = [];
 				this.colors = [];
-				this.labels = [];
 				if (angular.isDefined(this.statisticResponse)) {
+				this.labels = this.statisticResponse.labels;
 					angular.forEach(this.statisticResponse.categories, (cat : StatisticCategoryResult) => {
 						if (cats.indexOf(cat.category) > -1) {
 							this.data.push(cat.values);
 							this.series.push(cat.category);
 							this.colors.push(cat.color);
-							this.labels.push(cat.category);
 							if (this.calculateSum) {
 								this.addToSums(sums,cat.values);
 							}
@@ -74,7 +73,6 @@ module finalyze {
 						this.data.push(sums);
 						this.series.push(this.$filter('translate')('SUM'));
 						this.colors.push('#f0ad4e');
-						this.labels.push(this.$filter('translate')('SUM'));
 					}
 				}
 			});
