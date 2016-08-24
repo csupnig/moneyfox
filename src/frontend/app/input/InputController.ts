@@ -5,7 +5,7 @@ module finalyze {
 	export class InputController {
 
 		public static $inject = [
-			'$state', '$modal', 'StatementService', 'NotificationService','CategoryService'
+			'$state', '$uibModal', 'StatementService', 'NotificationService','CategoryService'
 		];
 
 		public statements : Array<Statement>;

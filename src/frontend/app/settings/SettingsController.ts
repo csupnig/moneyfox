@@ -11,7 +11,7 @@ module finalyze {
 			'AccountService',
 			'CategoryService',
 			'StatementService',
-			'$modal',
+			'$uibModal',
 			'NotificationService',
 			'ConfirmationService'
 		];

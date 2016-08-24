@@ -33,7 +33,7 @@ module finalyze {
     export class ConfirmationService {
 
         public static $inject : Array<string> = [
-            '$modal'
+            '$uibModal'
         ];
 
         constructor(private $modal : ng.ui.bootstrap.IModalService) {

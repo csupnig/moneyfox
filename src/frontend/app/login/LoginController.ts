@@ -6,7 +6,7 @@ module finalyze {
 
 		public static $inject = [
 			'$state',
-			'$modalStack'
+			'$uibModalStack'
 		];
 
 		public username : string;
